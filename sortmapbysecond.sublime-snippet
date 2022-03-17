@@ -1,0 +1,24 @@
+<snippet>
+	<content><![CDATA[
+
+struct cmp {
+    template <typename T>
+  
+    // Comparator function
+    bool operator()(const T& l,
+                    const T& r) const
+    {
+        if (l.second != r.second) {
+            return l.second < r.second;
+        }
+        return l.first < r.first;
+    }
+};
+	// cnt is map whose values to be sorted and s is set in which value key pair are //sorted by second 
+    set<pl,cmp> s(cnt.begin(),cnt.end());
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sortmapbysecond</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

@@ -1,0 +1,27 @@
+<snippet>
+  <content><![CDATA[
+auto lis(vector<int> const& a) {
+    int n = a.size();
+    const int INF = 1e9;
+    vector<int> d;
+    int siz=0;
+    vi ans(n,0);
+
+    for (int i = 0; i < n; i++) {
+        int j = lower_bound(d.begin(), d.end(), a[i]) - d.begin();
+        if( j==siz )d.push_back(a[i]),siz++;
+        else {
+            d[j]=a[i];
+        }
+            ans[i]=siz;
+    }
+
+   // __print(d);
+    return ans;
+}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>longest_increasing_subsequence</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope>source.python</scope> -->
+</snippet>

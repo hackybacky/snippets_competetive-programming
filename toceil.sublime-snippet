@@ -1,0 +1,11 @@
+
+<snippet>
+    <content><![CDATA[
+ll toceil(ll x,ll y){
+  return (x+y-1)/y;
+}
+
+
+]]></content>
+  <tabTrigger>toceil</tabTrigger>
+</snippet>

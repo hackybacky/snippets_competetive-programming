@@ -1,0 +1,27 @@
+<snippet>
+	<content><![CDATA[
+ll binaryToDecimal(ll n)
+{
+    ll num = n;
+    ll dec_value = 0;
+ 
+    ll base = 1;
+ 
+    ll temp = num;
+    while (temp) {
+        ll last_digit = temp % 10;
+        temp = temp / 10;
+ 
+        dec_value += last_digit * base;
+ 
+        base = base * 2;
+    }
+ 
+    return dec_value;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>binarytodecimal</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

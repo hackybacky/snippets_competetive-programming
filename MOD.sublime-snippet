@@ -1,0 +1,27 @@
+
+<snippet>
+    <content><![CDATA[
+ll modadd(ll a, ll b, ll m = mod) {
+    a = a % m;
+    b = b % m;
+    return (((a + b) % m) + m) % m;
+}
+ 
+ll modsub(ll a, ll b, ll m = mod) {
+    a = a % m;
+    b = b % m;
+    return (((a - b) % m) + m) % m;
+}
+
+ll modmul(ll a, ll b, ll m = mod) {
+    a = a % m;
+    b = b % m;
+    return (((a * b) % m) + m) % m;
+}
+
+
+
+
+]]></content>
+  <tabTrigger>MOD</tabTrigger>
+</snippet>

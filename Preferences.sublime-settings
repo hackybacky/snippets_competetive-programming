@@ -1,0 +1,15 @@
+{
+	"color_scheme": "Packages/Twilightcyanide Colorscheme/Twilightcyanide ColorScheme - Constrasted Light.tmTheme",
+	"detect_indentation": false,
+	"font_size": 11,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_numbers": true,
+	"line_padding_bottom": 2,
+	"line_padding_top": 1,
+	"tab_size": 2,
+	"theme": "Default.sublime-theme",
+	"translate_tabs_to_spaces": true
+}

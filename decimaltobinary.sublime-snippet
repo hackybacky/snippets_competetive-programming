@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+auto decToBinary(ll n)
+{
+    // array to store binary number
+    ll binaryNum[65];
+ 
+    // counter for binary array
+    ll i = 0;
+    while (n > 0) {
+ 
+        // storing remainder in binary array
+        binaryNum[i] = n % 2;
+        n = n / 2;
+        i++;
+    }
+ 
+    return binaryNum;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>decimaltobinary</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

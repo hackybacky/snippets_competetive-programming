@@ -1,0 +1,44 @@
+<snippet>
+	<content><![CDATA[
+
+struct query
+{
+  int l,r,i;
+};
+
+
+const int BLOCK_SIZE=750;
+
+bool cmp(query p, query q) {
+    if (p.l / BLOCK_SIZE != q.l / BLOCK_SIZE)
+        return p.l/BLOCK_SIZE < q.l/BLOCK_SIZE;
+    return (p.l / BLOCK_SIZE & 1) ? (p.r < q.r) : (p.r > q.r);
+}
+
+for (auto q : vq) {
+
+      while (cur_l > q.l) {
+          cur_l--;
+          add(cur_l);
+      }
+      while (cur_r < q.r) {
+          cur_r++;
+          add(cur_r);
+      }
+      while (cur_l < q.l) {
+          remove(cur_l);
+          cur_l++;
+      }
+      while (cur_r > q.r) {
+          remove(cur_r);
+          cur_r--;
+      }
+      answers[q.i] = ans;
+
+  }
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>MOS()</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

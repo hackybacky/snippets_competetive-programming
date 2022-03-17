@@ -1,0 +1,35 @@
+<snippet>
+	<content><![CDATA[
+
+auto  next_smaller(vl &a){
+    ll n=a.size();
+    stack<pair<ll,ll>> st;
+    vl ng(n+1,n);
+
+    forr(i,n){
+
+        ll next=a[i];
+        if(st.empty()){
+            st.push({a[i],i});
+            continue;
+        }
+
+        while(!st.empty() and st.top().F > next ){
+            ng[st.top().S]=i;
+            st.pop();
+
+        }
+
+        st.push({next,i});
+    }
+
+    return ng;
+
+    
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>next_small</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

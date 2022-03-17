@@ -1,0 +1,40 @@
+<snippet>
+	<content><![CDATA[
+vector<vi> graph(1e5+10);
+vi order;
+vector<bool > used(1e5+10,false);
+auto graph2=graph;
+
+dfs(int child , int par){
+
+  used[child]=true;
+
+  for(auto it :graph[child]){
+    if(!used[it])dfs(it,child);
+  }
+
+  order.pb(child);
+}
+vl com;
+
+//reverse order vector ;
+
+dfs2(int child , int par){
+
+  com.pb(child);
+
+  used[child]=true;
+
+  for(auto it : graph2[child] ){
+    if(!used[it])dfs2(it,child);
+  }
+
+
+}
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>connected comp dir</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

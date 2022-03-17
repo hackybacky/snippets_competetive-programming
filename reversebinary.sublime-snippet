@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+ll rotateBinary(ll number){
+ ll res = 0;
+ while(number>0){
+ res=res<<1; 
+ res = res|(number & 1); 
+ number=number>>1;
+ }
+ return res;
+ }
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>reversebinary</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
